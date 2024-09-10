@@ -27,6 +27,21 @@ function adjustButtonWidth() {
     contactBtn.style.minWidth = `${dynamicWidth}px`;
 }
 
-/////////////////
+// Project card
+
+function showCard(cardNumber) {
+    // Tüm kartları gizle
+    document.querySelectorAll('.card-container').forEach(function(card) {
+        card.classList.remove('active');
+    });
+
+    document.getElementById('card' + cardNumber).classList.add('active');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    showCard(1);
+});
+
+
 
 
